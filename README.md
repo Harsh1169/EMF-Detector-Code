@@ -1,5 +1,3 @@
-# CODE
-
 #include <Wire.h>
 #include <LiquidCrystal_I2C.h>
 
@@ -202,7 +200,7 @@ void loop()
     if (decayTime < actualMillis)
       rightAvg--;
       
-    volR = rightAvg;
+volR = rightAvg;
   }    
   else if (volR > (rightAvg + 2))
   {
@@ -245,7 +243,6 @@ void drawBar(int data, int peakData, int row)
   for (int col = 1; col < 15; col++)
   {
     lcd.setCursor(col, row);
-
     if (col < data)
     {
       lcd.write(1); //write bar element
